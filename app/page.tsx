@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-// @ts-ignore
 import { Link } from 'react-scroll';
 import { ExternalLink, Github, Layout, Trophy, Phone, Mail, FileVideo, Users, Menu, X } from 'lucide-react';
 import { FaReact, FaNodeJs, FaHtml5, FaPython, FaJava, FaAws, FaGithub, FaDocker, FaFacebook, FaInstagram, FaYoutube, FaLine } from 'react-icons/fa';
@@ -9,7 +8,6 @@ import { SiExpress, SiJavascript, SiC, SiFigma, SiAdobephotoshop, SiAdobepremier
 import { TbApi } from 'react-icons/tb';
 
 export default function PortfolioPage() {
-  // State สำหรับจัดการ Hamburger Menu บนมือถือ
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
@@ -156,7 +154,7 @@ export default function PortfolioPage() {
                 แพลตฟอร์มบันทึกสถิติการเทรดทองคำครบวงจร เกิดจากแนวคิดที่ต้องการบันทึกรายละเอียดการเทรดของตัวเองและคนในครอบครัว ระบบสามารถสร้างกราฟแสดงผลเพื่อวิเคราะห์หาช่วงเวลาที่ทำกำไรได้ดีที่สุด หรือสไตล์การเทรดที่ถนัด พร้อมระบบคำแนะนำอัตโนมัติ นอกจากนี้ยังมีการดึง API ข่าวจาก Investing & TradingView และมีฟีเจอร์คำนวณการถอนเงิน/ประเมินภาษี รองรับ Responsive เต็มรูปแบบ
               </p>
               <div className="flex flex-wrap gap-3 mt-auto">
-                <a href="https://trading-journal-git-main-aten2004s-projects.vercel.app/" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-xs text-tech-blue font-bold uppercase tracking-widest hover:text-white transition-colors bg-tech-blue/10 px-4 py-2 rounded-lg border border-tech-blue/20"><ExternalLink size={14}/> Live View</a>
+                <a href="https://trading-journal-git-main-aten2004s-projects.vercel.app/" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto gap-2 text-xs text-tech-blue bg-tech-blue/10 px-5 py-2.5 rounded-lg hover:bg-tech-blue/20 hover:text-white transition-colors uppercase tracking-widest font-bold border border-tech-blue/20"><ExternalLink size={14}/> Live View</a>
                 <a href="https://github.com/Aten2004/Trading-Journal.git" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-xs text-slate-200 font-bold uppercase tracking-widest hover:text-white transition-colors bg-white/5 px-4 py-2 rounded-lg border border-white/10"><Github size={14}/> Source Code</a>
               </div>
             </div>
@@ -182,7 +180,7 @@ export default function PortfolioPage() {
             </div>
           </div>
 
-          {/* Project 3: Lost & Found */}
+          {/* Project 3: TU Lost & Found */}
           <div className="group bg-[#1e293b]/70 backdrop-blur-md border border-white/10 rounded-2xl overflow-hidden hover:border-white/30 transition-all duration-500 lg:col-span-2 flex flex-col md:flex-row">
             
             <div className="md:w-2/5 h-48 md:h-auto bg-black/30 relative overflow-hidden flex items-center justify-center border-b md:border-b-0 md:border-r border-white/10">
@@ -205,6 +203,32 @@ export default function PortfolioPage() {
             </div>
           </div>
 
+          {/* Project 4: BioLog */}
+          <div className="group bg-[#1e293b]/70 backdrop-blur-md border border-white/10 rounded-2xl overflow-hidden hover:border-tech-blue/50 transition-all duration-500 lg:col-span-2 flex flex-col md:flex-row hover:shadow-glow-blue relative">
+            
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-tech-blue/0 via-tech-blue to-tech-blue/0 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+
+            <div className="md:w-2/5 h-48 md:h-auto bg-black/30 relative overflow-hidden flex items-center justify-center border-b md:border-b-0 md:border-r border-white/10">
+               <img src="/BioLog_Web.png" alt="BioLog Web Interface" className="w-full h-full object-cover object-left-top opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" />
+            </div>
+
+            <div className="p-6 md:p-8 md:w-3/5 flex flex-col">
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-2">BioLog</h3>
+              <p className="text-xs text-tech-blue mb-4 font-mono uppercase tracking-widest flex items-center gap-2 flex-wrap">
+                  <FaReact className="text-[#61DAFB] text-sm"/> React • Next.js • Supabase
+              </p>
+              <p className="text-sm text-slate-300 mb-6 leading-relaxed flex-1">
+                เว็บแอปพลิเคชันสำหรับเก็บบันทึกสถิติสุขภาพและการพัฒนาร่างกายแบบครบวงจร (น้ำหนัก, การนอน, การกิน, การออกกำลังกาย และ BMI) พัฒนาขึ้นเพื่อใช้งานส่วนตัวเนื่องจากแอปพลิเคชันในตลาดส่วนใหญ่ไม่ตอบโจทย์ไลฟ์สไตล์และมีค่าใช้จ่าย ระบบมีการเชื่อมต่อฐานข้อมูลเป็นหลังบ้าน (BaaS) เพื่อบันทึกและประมวลผลสถิติแบบเรียลไทม์ และโฮสต์ผ่าน Vercel
+              </p>
+              <div className="mt-auto flex flex-wrap gap-3">
+                <a href="https://bio-log-tau.vercel.app/" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center w-full sm:w-auto gap-2 text-xs text-tech-blue bg-tech-blue/10 px-5 py-2.5 rounded-lg hover:bg-tech-blue/20 hover:text-white transition-colors uppercase tracking-widest font-bold border border-tech-blue/20">
+                  <ExternalLink size={14}/> Live View
+                </a>
+                <a href="https://github.com/Aten2004/BioLog.git" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-xs text-slate-200 font-bold uppercase tracking-widest hover:text-white transition-colors bg-white/5 px-4 py-2 rounded-lg border border-white/10"><Github size={14}/> Source Code</a>
+              </div>
+            </div>
+          </div>
+            
         </div>
       </section>
 
